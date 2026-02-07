@@ -77,9 +77,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Capture")
 	TObjectPtr<UMaterialInterface> LandscapeMaterial;
 
-	UPROPERTY()
-	ALandscape* WorldLandscape;
-
+	        UPROPERTY()
+	        TObjectPtr<ALandscape> WorldLandscape;
 	UPROPERTY()
 	TObjectPtr<UWorldPartitionSubsystem> WorldPartitionSubsystem;
 	

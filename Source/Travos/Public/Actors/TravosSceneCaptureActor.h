@@ -17,15 +17,14 @@ public:
 	// Sets default values for this actor's properties
 	ATravosSceneCaptureActor();
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Scene Capture")
-	USceneCaptureComponent2D* SceneCaptureComponent;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Scene Capture")
-	URuntimeVirtualTextureComponent* RVTComponent;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scene Capture")
-	URuntimeVirtualTexture* TargetRVT;
-
+	        UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Scene Capture")
+	        TObjectPtr<USceneCaptureComponent2D> SceneCaptureComponent;
+	
+	        UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Scene Capture")
+	        TObjectPtr<URuntimeVirtualTextureComponent> RVTComponent;
+	
+	        UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scene Capture")
+	        TObjectPtr<URuntimeVirtualTexture> TargetRVT;
 	void SetCaptureLocationAndBounds(const FVector& Location, const FVector& Extent);
 
 protected:
